@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+//import PrimeiroComponente from './componentes/PrimeiroComponente'
+//import CompA, {CompB as B} from './componentes/DoisComponentes'
+//import MultiElementos from './componentes/MultiElementos'
+//import FamiliaSilva from './componentes/FamiliaSilva'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import Familia from './componentes/Familia'
+import Membro from './componentes/Membro'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const elemento = document.getElementById('root')
+
+ReactDOM.render(
+<div>
+  <Familia>
+    <Membro nome="Andre" sobrenome="Pereira" />
+    <Membro nome="Mariana" sobrenome="Pereira" />
+  </Familia>
+  <Familia>
+    <Membro nome="Bia" sobrenome="Arruda" />
+    <Membro nome="Gustavo" sobrenome="Arruda" />
+  </Familia>
+  {/*<FamiliaSilva />*/}
+  {/*<MultiElementos />*/}
+  {/*<CompA valor="Olá, eu sou o A" />/}
+  {/*<B valor="B na área" />/}
+  {/*</PrimeiroComponente valor="Bom dia!"/>*/}
+</div>
+, elemento)
+
+
+
+//ReactDOM.render(<h1>Olá React</h1>, elemento)
